@@ -63,5 +63,11 @@ def goji_datsuji(text):  #誤字脱字
 
     return goji_datsuji
 
+def keijoshi_average(text): #平均系助詞の数
+    keijoshi=[]
+    keijoshi=[line for line in tagger.parse(text).splitlines() if "係助詞" in line.split()[-1]]
 
-print(goji_datsuji2(TEXT))
+    return len(keijoshi) / (len(text.split("。")) - 1)
+
+
+print(keijoshi_average(TEXT))
