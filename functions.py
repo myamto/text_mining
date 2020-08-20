@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import CaboCha
 import MeCab
 tagger = MeCab.Tagger('-Ochasen')
 
@@ -69,5 +70,9 @@ def keijoshi_average(text): #平均系助詞の数
 
     return len(keijoshi) / (len(text.split("。")) - 1)
 
+def kudokuten(text): #句読点間の平均文字数
+    return len(text) / (text.count("、") + text.count("。"))
 
-print(keijoshi_average(TEXT))
+
+
+print(kudokuten(TEXT))
