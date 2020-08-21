@@ -73,6 +73,9 @@ def keijoshi_average(text): #平均系助詞の数
 def kudokuten(text): #句読点間の平均文字数
     return len(text) / (text.count("、") + text.count("。"))
 
+def kakariuke_average_distance(text): #係り受け平均距離
+    return len(text) / (text.count("、") + text.count("。"))
+
 
 
 print(kudokuten(TEXT))
