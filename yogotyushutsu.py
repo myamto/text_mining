@@ -11,7 +11,7 @@ text = '主訴は「手足が動きにくく、歩けない」である。これ
 #print(tagger.parse(text))
 
 # ファイルを読み込む
-tagged_text = open("sample.txt", "r", encoding="utf-8").read()
+tagged_text = open("mecabu.txt", "r", encoding="utf-8").read()
 #tagged_text = tagger.parse(text)
 
 # 出力するファイルの選択
