@@ -7,7 +7,7 @@ def main():
     label_ls = []  # 初期化
     text_ls = []  # 初期化
     f_input = open("data/training_data.csv", 'r')  # fileのopen
-    f_output = open("mldata.csv", mode='w')  # 出力するファイルの選択
+    f_output = open("mldata_skill.csv", mode='w')  # 出力するファイルの選択
     data = csv.reader(f_input)  # ファイルの読み込み(str型)
 #------------------------------1---------------------------------
     for row in data:
